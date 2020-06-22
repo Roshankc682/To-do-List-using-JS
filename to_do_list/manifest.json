@@ -1,0 +1,16 @@
+{
+  "name": "To-Do-List",
+  "version": "1.1",
+  "description": "This extension is very helpful for forgotten people ",
+  "manifest_version": 2,
+  
+  "incognito": "split",
+  
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  
+"icons": {
+    "128": "icon.png"
+    }
+}
