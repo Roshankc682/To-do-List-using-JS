@@ -24,7 +24,11 @@ function myFunction_to_get_name() {
 }
 
 function saveName() {
-  localStorage.setItem("User", document.getElementById("myName").value);
+  var first_letter = document.getElementById("myName").value;
+  var capital_first_letter = first_letter[0].toUpperCase();
+  first_letter = first_letter.replace(first_letter[0], capital_first_letter);
+
+  localStorage.setItem("User", first_letter);
 }
 
 var name_from_user_from_storage = localStorage.getItem("User");
