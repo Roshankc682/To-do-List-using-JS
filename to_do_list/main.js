@@ -118,6 +118,7 @@ $("#myInput").keypress(function (event) {
   }
 });
 
+document.getElementById("myInput").focus();
 // This will save the HTML to localStorage with key
 
 function saveState() {
