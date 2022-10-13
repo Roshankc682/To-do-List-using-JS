@@ -1,6 +1,5 @@
 # Contribution Rules :books::star: :
 
-- Do NOT add any build steps e.g npm install or pip install ,etc (we want to keep this a simple static site),
 - Do NOT remove other contents in the file.
 - Styling/code can be pretty, ugly or stupid, big or small as long as the code works it is ok.
 - Try to keep pull requests small to minimize merge conflicts.
