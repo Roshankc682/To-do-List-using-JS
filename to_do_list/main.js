@@ -29,6 +29,7 @@ function saveName() {
   first_letter = first_letter.replace(first_letter[0], capital_first_letter);
 
   localStorage.setItem("User", first_letter);
+  location.reload();
 }
 
 var name_from_user_from_storage = localStorage.getItem("User");
@@ -114,6 +115,7 @@ $("#myInput").keypress(function (event) {
   }
 });
 
+document.getElementById("myInput").focus();
 // This will save the HTML to localStorage with key
 
 function saveState() {
