@@ -2,7 +2,7 @@
   "name": "To-Do-List",
   "version": "1.1",
   "description": "This extension is very helpful for forgotten people ",
-  "manifest_version": 2,
+  "manifest_version": 3,
   
   "incognito": "split",
   
