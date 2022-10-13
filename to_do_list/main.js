@@ -29,7 +29,7 @@ function saveName() {
   first_letter = first_letter.replace(first_letter[0], capital_first_letter);
 
   localStorage.setItem("User", first_letter);
-  location.reload()
+  location.reload();
 }
 
 var name_from_user_from_storage = localStorage.getItem("User");
