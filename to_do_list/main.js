@@ -85,9 +85,8 @@ function myFunction_custom_by_user() {
       '&nbsp;&nbsp;&nbsp;&nbsp;<span class="material-icons" style="position: absolute;right: 0;top: 0;padding: 15px 20px;">Delete</span></li>';
     saveState();
   }
-  
+
   document.getElementById("myInput").value = "";
-  document.getElementById("myInput").focus();
 }
 
 //=================================================================//
@@ -109,12 +108,9 @@ $("#myInput").keypress(function (event) {
         inputValue +
         '&nbsp;&nbsp;&nbsp;&nbsp;<span class="material-icons" style="position: absolute;right: 0;top: 0;padding: 15px 20px;">Delete</span></li>';
       saveState();
-            document.getElementById("myInput").focus();
-
     }
 
     document.getElementById("myInput").value = "";
-    
   }
 });
 
@@ -125,7 +121,6 @@ function saveState() {
     "DO_TASK",
     document.getElementById("list-group").innerHTML
   );
-
 }
 
 // This is used to remove the choosen list from html and saveState is called to store the list from html DOM
@@ -164,7 +159,7 @@ if (savedToDoList === null) {
   document.getElementById("list-group").innerHTML =
     localStorage.getItem("DO_TASK");
 }
-        document.getElementById("myInput").focus();
+
 // if the image_path is empty
 
 var image_path_from_storage = localStorage.getItem("image_path");
