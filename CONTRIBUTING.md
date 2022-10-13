@@ -40,4 +40,4 @@
 
 - You can wait for the Pull-Request to be Merged :smile:.<br>
 
-<h2> <strong><center>Happy Hacking :smile: </h2></strong>
+<h2> Happy Hacking 🤩 </h2>
