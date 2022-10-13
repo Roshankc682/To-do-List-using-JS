@@ -80,10 +80,22 @@ function myFunction_custom_by_user() {
     alert("You forget to type !");
   } else {
     // This will add the li value to html DOM :)
+
+    // Adding Date and Time of Note
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var Time = hours + ':' + minutes + ' ' + ampm;
     document.getElementById("list-group").innerHTML +=
-      '<li style="color:white;border-radius: 25px;list-style-type: none;width: 750px;cursor: pointer;position: relative;padding: 14px 12px 14px 50px;margin: 0px 15px 10px 0px;background: rgba(102, 26, 97, 0.8);font-size: 15px;transition: 0.2s;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;" class="items_to_do_list" id="Done_task">' +
-      inputValue +
-      '&nbsp;&nbsp;&nbsp;&nbsp;<span class="material-icons" style="position: absolute;right: 0;top: 0;padding: 15px 20px;">Delete</span></li>';
+      `<li style="color:white;border-radius: 25px;list-style-type: none;width: 750px;cursor: pointer;position: relative;padding: 14px 12px 14px 50px;margin: 0px 15px 10px 0px;background: rgba(102, 26, 97, 0.8);font-size: 15px;transition: 0.2s;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;" class="items_to_do_list" id="Done_task">
+      ${inputValue}
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="material-icons" style="position: absolute;right: 0;top: 0;padding: 15px 20px;">Delete</span><br>${days[now.getDay()] +" "+ now.getDate()+" "+months[now.getMonth()]+","+now.getFullYear()+"\t"+Time}</li > `;
     saveState();
   }
 
