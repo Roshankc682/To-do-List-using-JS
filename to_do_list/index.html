@@ -52,7 +52,6 @@ input[type="radio"]:checked + .theme-label .theme-image {
 .container_for_image {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .container_for_image > div {
@@ -61,19 +60,6 @@ input[type="radio"]:checked + .theme-label .theme-image {
   margin: 10px;
   text-align: center;
  
-}
-
-#myName{
-  display: inline;
-  width: 60%;
-  margin-right: 1rem;
-}
-
-#image_url{
-display: inline;
-  width: 60%;
-  margin-right: 1rem;
-  z-index: 9;
 }
 
 </style>
@@ -98,24 +84,20 @@ display: inline;
       </div>
       <div class="modal-body">
         <!--Add Name============-->
-      <input type="text" class="form-control" id="myName" rows="1" placeholder="Type your Name">
-        <button type="button" class="btn btn-primary" id="myFunction_to_get_name">Add Name</button>
-<br>
-<br>
+      <input type="text" class="form-control" id="myName" rows="3" placeholder="Type your Name"><br>
+        <center><button type="button" class="btn btn-primary" id="myFunction_to_get_name">Add Name</button></center>
+        <br>
+
 
         <!--===============Add image background=========-->
-
-        <!-- <input type="text" class="form-control" id="myName" rows="1" placeholder="Paste the url from internet">
-        <button type="button" class="btn btn-primary" id="myFunction_to_get_name">Add Image</button>
-        <br> -->
-
-     <!-- Render textfield component -->
+     <center>  <!-- Render textfield component -->
+      <label class="mdc-text-field mdc-text-field--filled">
         <span class="mdc-text-field__ripple"></span>
-        <input type="text" class="form-control" id="image_url" aria-labelledby="my-label" placeholder="Paste the url from internet">
-        <!-- <span class="mdc-floating-label" id="my-label">Copy Image Path</span> class="mdc-text-field__input" -->
-        <button type="button" class="btn btn-primary" id="myFunction_image">Add Image</button>
+        <input type="text" class="mdc-text-field__input" id="image_url" aria-labelledby="my-label" placeholder="Paste the url from internet">
+        <span class="mdc-floating-label" id="my-label">Copy Image Path</span>
         <span class="mdc-line-ripple"></span>
-        <br><br>
+        <button type="button" class="btn btn-primary" id="myFunction_image">Add Image</button>
+      </label></center>
 
       <!-- Image can be choosen from directory -->
       <center><p style="font-weight: bold;box-shadow: #888888;">Choose Image for Background</p></center>
