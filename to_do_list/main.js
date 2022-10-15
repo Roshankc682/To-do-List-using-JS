@@ -73,6 +73,7 @@ function myFunction_custom_by_user() {
   // This is when the add button is ADD button is clicked
 
   var inputValue = document.getElementById("myInput").value;
+  inputValue = inputValue.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   // alert(1)
   // console.log(inputValue)
 
