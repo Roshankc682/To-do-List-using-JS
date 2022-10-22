@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>To-Do-List</title>
+
+  <link rel="icon" href="./image/todo_logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css_javascript/css/min.css" crossorigin="anonymous">
+
+  <script src="css_javascript/js/jq/min.js" crossorigin="anonymous"></script>
+
+  <script src="css_javascript/js/umd/min_1.js" crossorigin="anonymous"></script>
+
+  <script src="css_javascript/js/min.js" crossorigin="anonymous"></script>
+
+  <!-- Required styles for Material Web -->
+  <link rel="stylesheet" href="dist/min.css">
+  <link rel="stylesheet" href="dist/min.js">
+  <style type="text/css">
+    body {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover !important;
+      width: 100vw !important;
+      min-height: 100vh !important;
+    }
+
+    ul li.checked {
+      text-decoration: line-through;
+    }
+
+    ul li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: #ffffff;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      top: 14px;
+      left: 22px;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 7px;
+    }
+
+    .form-field-center {
+      /*background-color: #FF4136;*/
+      width: 800px;
+      height: 0px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    input[type="radio"]:checked+.theme-label .theme-image {
+      box-shadow: 0px 0px 2px 3px #4d97f5;
+    }
+
+
+    .container_for_image {
+      margin-left: 60px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .container_for_image>div {
+      background-color: #f1f1f1;
+      width: 150px;
+      margin: 10px;
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Button trigger modal -->
+  <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Update profile
+    </button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!--Add Name============-->
+          <input type="text" class="form-control" id="myName" rows="3" placeholder="Type your Name"><br>
+          <center><button type="button" class="btn btn-primary" id="myFunction_to_get_name">Add Name</button></center>
+          <br>
+
+
+          <!--===============Add image background=========-->
+          <center>
+            <!-- Render textfield component -->
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <input type="text" class="mdc-text-field__input" id="image_url" aria-labelledby="my-label"
+                placeholder="Paste the url from internet">
+              <span class="mdc-floating-label" id="my-label">Copy Image Path</span>
+              <span class="mdc-line-ripple"></span>
+              <button type="button" class="btn btn-primary" id="myFunction_image">Add Image</button>
+            </label>
+          </center>
+
+          <!-- Image can be choosen from directory -->
+          <center>
+            <p style="font-weight: bold;box-shadow: #888888;">Choose Image for Background</p>
+          </center>
+          <div class="container_for_image">
+            <div><img id="img_name_1" src="image/1.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px;" id="i_1" type="button" class="btn btn-info">Sun-Rise</button></div>
+            <div><img id="img_name_2" src="image/2.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_2" type="button" class="btn btn-info">Boat</button></div>
+            <div><img id="img_name_3" src="image/3.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_3" type="button" class="btn btn-info">Nature</button></div>
+            <div><img id="img_name_4" src="image/4.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_4" type="button" class="btn btn-info">Sky</button></div>
+            <div><img id="img_name_5" src="image/5.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_5" type="button" class="btn btn-info">Joker</button></div>
+            <div><img id="img_name_6" src="image/6.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_6" type="button" class="btn btn-info">Sky Black</button></div>
+            <div><img id="img_name_7" src="image/7.jpg" style="height: 100px;width: 150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_7" type="button" class="btn btn-info">Spider Man</button></div>
+            <div><img id="img_name_8" src="image/8.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_8" type="button" class="btn btn-info">Joker angry</button></div>
+            <div><img id="img_name_9" src="image/9.jpg" style="height: 100px;width:  150px;margin: 5px;"><button
+                style="margin-top: 2px; " id="i_9" type="button" class="btn btn-info">Red</button></div>
+
+          </div>
+
+          <!-- Instantiate single textfield component rendered in the document -->
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="Name_of_user" id="Name_of_user"
+    style="display: flex;align-items: center;justify-content: center;font-size: large; color:aqua;font-style: italic;">
+    <!--name will be display Here -->
+  </div>
+  <br><br>
+
+  <center>
+    <p style="font-size:40px;background-color: black;font-style: italic ;color: cyan;font-weight: bold;box-shadow: #888888;border-radius: 10px; opacity: 0.7;"
+      id="motivational_quote"></p>
+  </center>
+
+
+  <br>
+  <form class='d-flex justify-content-center'>
+    <div class='text-center' style="
+    background-color: #fff;
+    border: 2px solid #53b800;
+    border-radius: 80px 80px 80px 80px;
+    box-shadow: 0 2px 5px 0 #c7c7c7;
+    color: #000;
+    font-size: 16pt;
+    font-weight: 600;
+    line-height: 20px;
+    outline: medium none;
+    padding: 10px 25px 10px 25px;
+    text-transform: capitalize;
+    width:fit-content;
+" ><img src="https://1.bp.blogspot.com/-hSWWgNO_pOs/VOToQXw_wmI/AAAAAAAABsU/SYUSJONNRQM/s1600/h3.png" alt="">
+        List-To-Do</div><br>
+  </form>
+
+  <div class="form-field-center">
+
+    <ul id="list-group">
+
+
+    </ul>
+    <form>
+      <div class="form-group">
+
+        <input type="text" class="form-control" id="myInput" rows="3" placeholder="Add you task"><br>
+        <center><button type="button" class="btn btn-primary" id="myFunction">ADD TASK</button></center>
+
+      </div>
+    </form>
+
+
+</body>
+<script type="text/javascript" src="main.js"></script>
+
+</html>
