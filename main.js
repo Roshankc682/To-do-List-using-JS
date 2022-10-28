@@ -1,156 +1,97 @@
-:root {
-	--dark: #374151;
-	--darker: #1F2937;
-	--darkest: #111827;
-	--grey: #6B7280;
-	--pink: #EC4899;
-	--purple: #8B5CF6;
-	--light: #EEE;
+window.onload = () => {
+	const form1 = document.querySelector("#addForm");
+
+	let items = document.getElementById("items");
+	let submit = document.getElementById("submit");
+
+	let editItem = null;
+
+	form1.addEventListener("submit", addItem);
+	items.addEventListener("click", removeItem);
+};
+
+function addItem(e) {
+	e.preventDefault();
+
+	if (submit.value != "Submit") {
+		console.log("Hello");
+
+		editItem.target.parentNode.childNodes[0].data
+			= document.getElementById("item").value;
+
+		submit.value = "Submit";
+		document.getElementById("item").value = "";
+
+		document.getElementById("lblsuccess").innerHTML
+			= "Text edited successfully";
+
+		document.getElementById("lblsuccess")
+						.style.display = "block";
+
+		setTimeout(function() {
+			document.getElementById("lblsuccess")
+							.style.display = "none";
+		}, 3000);
+
+		return false;
+	}
+
+	let newItem = document.getElementById("item").value;
+	if (newItem.trim() == "" || newItem.trim() == null)
+		return false;
+	else
+		document.getElementById("item").value = "";
+
+	let li = document.createElement("li");
+	li.className = "list-group-item";
+
+	let deleteButton = document.createElement("button");
+
+	deleteButton.className =
+		"btn-danger btn btn-sm float-right delete";
+
+	deleteButton.appendChild(document.createTextNode("Delete"));
+
+	let editButton = document.createElement("button");
+
+	editButton.className =
+			"btn-success btn btn-sm float-right edit";
+
+	editButton.appendChild(document.createTextNode("Edit"));
+
+	li.appendChild(document.createTextNode(newItem));
+	li.appendChild(deleteButton);
+	li.appendChild(editButton);
+
+	items.appendChild(li);
 }
 
-* {
-	margin: 0;
-	box-sizing: border-box;
-	font-family: "Fira sans", sans-serif;
+function removeItem(e) {
+	e.preventDefault();
+	if (e.target.classList.contains("delete")) {
+		if (confirm("Are you Sure?")) {
+			let li = e.target.parentNode;
+			items.removeChild(li);
+			document.getElementById("lblsuccess").innerHTML
+				= "Text deleted successfully";
+
+			document.getElementById("lblsuccess")
+						.style.display = "block";
+
+			setTimeout(function() {
+				document.getElementById("lblsuccess")
+						.style.display = "none";
+			}, 3000);
+		}
+	}
+	if (e.target.classList.contains("edit")) {
+		document.getElementById("item").value =
+			e.target.parentNode.childNodes[0].data;
+		submit.value = "EDIT";
+		editItem = e;
+	}
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	color: #FFF;
-	background-color: var(--dark);
-}
-
-header {
-	padding: 2rem 1rem;
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
-}
-
-header h1{ 
-	font-size: 2.5rem;
-	font-weight: 300;
-	color: var(--grey);
-	margin-bottom: 1rem;
-}
-
-#new-task-form {
-	display: flex;;
-}
-
-input, button {
-	appearance: none;
-	border: none;
-	outline: none;
-	background: none;
-}
-
-#new-task-input {
-	flex: 1 1 0%;
-	background-color: var(--darker);
-	padding: 1rem;
-	border-radius: 1rem;
-	margin-right: 1rem;
-	color: var(--light);
-	font-size: 1.25rem;
-}
-
-#new-task-input::placeholder {
-	color: var(--grey);
-}
-
-#new-task-submit {
-	color: var(--pink);
-	font-size: 1.25rem;
-	font-weight: 700;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: pointer;
-	transition: 0.4s;
-}
-
-#new-task-submit:hover {
-	opacity: 0.8;
-}
-
-#new-task-submit:active {
-	opacity: 0.6;
-}
-
-main {
-	flex: 1 1 0%;
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
-}
-
-.task-list {
-	padding: 1rem;
-}
-
-.task-list h2 {
-	font-size: 1.5rem;
-	font-weight: 300;
-	color: var(--grey);
-	margin-bottom: 1rem;
-}
-
-#tasks .task {
-	display: flex;
-	justify-content: space-between;
-	background-color: var(--darkest);
-	padding: 1rem;
-	border-radius: 1rem;
-	margin-bottom: 1rem;
-}
-
-.task .content {
-	flex: 1 1 0%;
-}
-
-.task .content .text {
-	color: var(--light);
-	font-size: 1.125rem;
-	width: 100%;
-	display: block;
-	transition: 0.4s;
-}
-
-.task .content .text:not(:read-only) {
-	color: var(--pink);
-}
-
-.task .actions {
-	display: flex;
-	margin: 0 -0.5rem;
-}
-
-.task .actions button {
-	cursor: pointer;
-	margin: 0 0.5rem;
-	font-size: 1.125rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	transition: 0.4s;
-}
-
-.task .actions button:hover {
-	opacity: 0.8;
-}
-
-.task .actions button:active {
-	opacity: 0.6;
-}
-
-.task .actions .edit {
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.task .actions .delete {
-	color: crimson;
+function toggleButton(ref, btnID) {
+	document.getElementById(btnID).disabled = false;
 }
