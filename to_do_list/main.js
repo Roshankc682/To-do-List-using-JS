@@ -172,8 +172,14 @@ if (image_path_from_storage === null ) {
 	var custum_url = 'image/1.jpg';
 	localStorage.setItem('image_path',custum_url);
 	var url_parameter = document.body.style.backgroundImage = "url("+custum_url+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 	
 }
 else {
@@ -223,8 +229,15 @@ function save_image_path()
 
   document.body.style.backgroundColor = "#f3f3f3";
   var url_parameter = document.body.style.backgroundImage = "url('"+ image_url_form_storage +"')";
- document.body.style.backgroundRepeat = "no-repeat";
- document.body.style.backgroundSize = "1400px 800px";
+ 
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "100% 100%";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.width = "100vw"; // Set width to 100% of viewport width
+  document.body.style.height = "100vh"; // Set height to 100% of viewport height
+
+  // Optionally, you can set the background color for better contrast
+  document.body.style.backgroundColor = "#f1f1f1";
   // document.body.style.width = "100px";
 
   document.getElementById("image_url").value = "";
@@ -296,8 +309,14 @@ function f_1()
 	// alert(1)
 	localStorage.setItem('image_path',image_by_developer_1);
 	document.body.style.backgroundImage = "url("+image_by_developer_1+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
 
 function f_2()
@@ -306,9 +325,21 @@ function f_2()
 	// alert(image_by_developer_2)
 	
 	localStorage.setItem('image_path',image_by_developer_2);
-	document.body.style.backgroundImage = "url("+image_by_developer_2+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+
+	document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
+  
+	// Optionally, you can set the background color for better contrast
+	// document.body.style.backgroundColor = "#f1f1f1";
+	// document.body.style.backgroundImage = "url("+image_by_developer_2+")";
+ 	// document.body.style.backgroundRepeat = "no-repeat";
+ 	// document.body.style.backgroundSize = "1400px 800px";
 }
 function f_3()
 {
@@ -317,8 +348,14 @@ function f_3()
 	
 	localStorage.setItem('image_path',image_by_developer_3);
 	document.body.style.backgroundImage = "url("+image_by_developer_3+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
 
 function f_4()
@@ -328,8 +365,14 @@ function f_4()
 	
 	localStorage.setItem('image_path',image_by_developer_4);
 	document.body.style.backgroundImage = "url("+image_by_developer_4+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
 function f_5()
 {
@@ -338,8 +381,14 @@ function f_5()
 	
 	localStorage.setItem('image_path',image_by_developer_5);
 	document.body.style.backgroundImage = "url("+image_by_developer_5+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
 function f_6()
 {
@@ -348,8 +397,14 @@ function f_6()
 	
 	localStorage.setItem('image_path',image_by_developer_6);
 	document.body.style.backgroundImage = "url("+image_by_developer_6+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
 function f_7()
 {
@@ -358,8 +413,14 @@ function f_7()
 	
 	localStorage.setItem('image_path',image_by_developer_7);
 	document.body.style.backgroundImage = "url("+image_by_developer_7+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
 function f_8()
 {
@@ -368,8 +429,14 @@ function f_8()
 	
 	localStorage.setItem('image_path',image_by_developer_8);
 	document.body.style.backgroundImage = "url("+image_by_developer_8+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
 function f_9()
 {
@@ -378,6 +445,12 @@ function f_9()
 	
 	localStorage.setItem('image_path',image_by_developer_9);
 	document.body.style.backgroundImage = "url("+image_by_developer_9+")";
- 	document.body.style.backgroundRepeat = "no-repeat";
- 	document.body.style.backgroundSize = "1400px 800px";
+ 		document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundSize = "100% 100%";
+	document.body.style.backgroundPosition = "center";
+	document.body.style.width = "100vw"; // Set width to 100% of viewport width
+	document.body.style.height = "100vh"; // Set height to 100% of viewport height
+  
+	// Optionally, you can set the background color for better contrast
+	document.body.style.backgroundColor = "#f1f1f1";
 }
